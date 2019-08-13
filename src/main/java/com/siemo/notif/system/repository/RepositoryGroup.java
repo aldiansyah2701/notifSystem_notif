@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 import com.siemo.notif.system.model.Group;
 
 @Repository
-public interface RepositoryGroup extends JpaSpecificationExecutor<Group> {
+public interface RepositoryGroup extends MongoRepository<Group, String> {
 	Group findByCategoryAndDetail(String category, String detail);
 }
